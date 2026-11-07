@@ -11,7 +11,7 @@ The primary objective of this project is **hands-on practice and mastery of HTML
 - Data separation using constants and dynamic mapping (`Array.prototype.map`).
 - Interactive state management with React Hooks (e.g., mobile navigation toggle).
 
-> 💡 **Note:** This project is actively being developed and refined. Future enhancements and features (such as an online ordering flow, shopping cart system, and interactive food filters) will be added soon.
+> 💡 **Note:** This project is actively being developed and refined. Future enhancements and features will be added soon.
 
 ---
 
@@ -66,13 +66,4 @@ npm run build
 
 ---
 
-## 🔮 Upcoming Improvements
-
-- [ ] Interactive shopping cart drawer.
-- [ ] Live filtering for the Popular Foods section by category.
-- [ ] Modal view for pizza customization (sizes, extra cheese, toppings).
-- [ ] Smooth scroll animations with Framer Motion or AOS.
-
----
-
-Made with ❤️ and dedication to continuous front-end learning.
+Made with ❤️.
