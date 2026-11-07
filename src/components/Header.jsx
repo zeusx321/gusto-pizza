@@ -1,44 +1,56 @@
+import React, { useState } from 'react';
 import searchIcon from '../assets/search.svg';
 import menuIcon from '../assets/menu.svg';
-import '../css/style.css'
+import '../css/style.css';
+import { NAV_LINKS } from '../constants';
 
-const navBar = {
-    one: ['Menu', '#menu'],
-}
+function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-function Header(){
-    return(
-        
-            <header>
-                <nav class="header__nav">
-                    <div class="header__logo">
+    const toggleMenu = () => {
+        setIsMenuOpen(prev => !prev);
+    };
+
+    return (
+        <header>
+            <nav className="header__nav">
+                <div className="header__logo">
                     <h4>Gusto Pizza</h4>
-                    <div class="header__logo-overlay"></div>
-                    </div>
-                    <ul class="header__menu">
+                    <div className="header__logo-overlay"></div>
+                </div>
+                <ul className="header__menu">
+                    {NAV_LINKS.map((link) => (
+                        <li key={link.id}>
+                            <a href={link.href}>{link.label}</a>
+                        </li>
+                    ))}
                     <li>
-                        <a href={navBar.one[0]}>{navBar.one[0]}</a>
+                        <img src={searchIcon} alt="Search" />
                     </li>
-                    <li>
-                        <a href="#food">Food</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#about-us">About Us</a>
-                    </li>
-                    <li>
-                        <img src={searchIcon} alt="Search"/>
-                    </li>
-                    </ul>
+                </ul>
 
-                    <ul class="header__menu-mobile">
-                    <img src={menuIcon} alt="Search"/>
+                <button 
+                    className="header__menu-mobile-btn" 
+                    onClick={toggleMenu}
+                    aria-label="Toggle Navigation"
+                >
+                    <img src={menuIcon} alt="Menu" />
+                </button>
+
+                <div className="header__mobile-dropdown">
+                    <ul>
+                        {NAV_LINKS.map((link) => (
+                            <li key={link.id}>
+                                <a href={link.href} onClick={() => setIsMenuOpen(false)}>
+                                    {link.label}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
-                </nav>
+                </div>
+            </nav>
         </header>
-    )
+    );
 }
 
 export default Header;

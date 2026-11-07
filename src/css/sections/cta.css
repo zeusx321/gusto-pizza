@@ -1,0 +1,167 @@
+.cta {
+    min-height: 500px;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px;
+}
+
+.cta-bg-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--playfair-display);
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 105px;
+    color: var(--color-creamson);
+    opacity: 0.1;
+    user-select: none;
+    pointer-events: none;
+    text-align: center;
+}
+
+.cta-bg-left {
+    left: 80px;
+}
+
+.cta-bg-right {
+    right: 80px;
+}
+
+.cta-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.cta-div h2 {
+    font-size: 55px;
+    color: var(--color-white);
+    font-family: var(--playfair-display);
+    line-height: 1.2;
+    max-width: 800px;
+}
+
+.cta-div p {
+    font-size: 18px;
+    color: var(--color-white);
+    font-family: var(--plus-jakarta-sans);
+    opacity: 0.9;
+}
+
+.cta-email {
+    width: 100%;
+    max-width: 500px;
+    height: 64px;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cta-email input {
+    flex: 1;
+    height: 100%;
+    padding: 0 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    font-family: var(--plus-jakarta-sans);
+    font-size: 16px;
+    min-width: 0;
+}
+
+.cta-email input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px;
+}
+
+.cta-email button {
+    height: 100%;
+    padding: 0 28px;
+    background-color: var(--secondary-color);
+    color: var(--color-white);
+    border: none;
+    border-radius: 500px;
+    font-family: var(--plus-jakarta-sans);
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.cta-email button:hover {
+    background-color: var(--black-200);
+}
+
+@media screen and (max-width: 992px) {
+    .cta-div h2 {
+        font-size: 42px;
+    }
+
+    .cta-bg-text {
+        font-size: 80px;
+        line-height: 85px;
+    }
+
+    .cta-bg-left {
+        left: 20px;
+    }
+
+    .cta-bg-right {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cta-bg-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cta {
+        min-height: auto;
+        padding: 50px 15px;
+    }
+
+    .cta-div h2 {
+        font-size: 32px;
+    }
+
+    .cta-div p {
+        font-size: 15px;
+    }
+
+    .cta-email {
+        height: auto;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .cta-email input {
+        width: 100%;
+        height: 45px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .cta-email button {
+        width: 100%;
+        height: 45px;
+        border-radius: 12px;
+    }
+}

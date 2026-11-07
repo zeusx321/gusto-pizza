@@ -1,31 +1,35 @@
-.popular{
+.popular {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    min-height: 800px;
     background-color: var(--primary-color);
     gap: 35px;
+    padding: 60px 20px;
 }
 
-.popular h2{
+.popular h2 {
     font-size: 55px;
     font-weight: 600;
     font-family: var(--playfair-display);
     color: var(--color-creamson);
+    text-align: center;
 }
 
-.popular-categorize-divs, .popular-category-div, .popular-food-rate, .popular-button-div button{
+.popular-categorize-divs, .popular-category-div, .popular-food-rate, .popular-button-div button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.popular-categorize-divs{
+.popular-categorize-divs {
     gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.popular-category-div{
+.popular-category-div {
     background-color: rgba(227, 223, 215, 0.075);
     border: 1px rgba(227, 223, 215, 0.233) solid;
     padding: 0 18px;
@@ -38,33 +42,37 @@
     transition: all 0.3s ease;
 }
 
-.popular-category-div:hover{
+.popular-category-div:hover {
     background-color: rgba(227, 223, 215, 0.15);
 }
 
-.all-pop{
+.all-pop {
     background: #E3DFD7;
     color: #212A1F;
     font-weight: 700;
 }
 
-.all-pop:hover{
-    color: #E3DFD7;
+.all-pop:hover {
+    color: #212A1F;
+    background: #FFFFFF;
 }
 
-.popular-category-div img{
+.popular-category-div img {
     margin-right: 7px;
 }
 
-.popular-foods-divs{
+.popular-foods-divs {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     gap: 30px;
     padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
-.popular-foods-div{
+.popular-foods-div {
     width: 280px; 
     height: 350px;
     display: flex;
@@ -83,7 +91,7 @@
     transform: translateY(-6px);
 }
 
-.mid-popular-foods-div{
+.mid-popular-foods-div {
     width: 320px;
     height: 400px;
     background-color: #FFFFFF;
@@ -93,36 +101,38 @@
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.089);
 }
 
-.pop-food-img{
+.pop-food-img {
     max-width: 90%;
+    max-height: 180px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .mid-popular-foods-div .pop-food-img {
     max-width: 89%;
+    max-height: 200px;
 }
 
-.mid-popular-foods-div .popular-food-rate img{
+.mid-popular-foods-div .popular-food-rate img {
     width: 25px;
     height: 25px;
 }
 
-.mid-popular-foods-div .popular-food-rate p{
+.mid-popular-foods-div .popular-food-rate p {
     font-size: 22px;
+    color: #666666;
 }
 
-
-.mid-popular-foods-div .popular-food-info-price h5{
+.mid-popular-foods-div .popular-food-info-price h5 {
     font-size: 24px;
+    color: #212A1F;
 }
-
 
 .popular-foods-div:hover .pop-food-img {
     transform: scale(1.03);
 }
 
-.popular-foods-div h4{
+.popular-foods-div h4 {
     font-size: 30px;
     color: var(--color-creamson);
     font-family: var(--playfair-display);
@@ -130,53 +140,43 @@
     text-align: center;
 }
 
-.mid-popular-foods-div h4{
+.mid-popular-foods-div h4 {
     font-size: 37px;
     color: #212A1F;
     font-weight: 700;
 }
 
-.popular-food-info{
+.popular-food-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.popular-food-rate{
+.popular-food-rate {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.popular-food-rate img{
+.popular-food-rate img {
     width: 20px;
     height: 20px;
 }
 
-.popular-food-rate p{
+.popular-food-rate p {
     font-size: 18px;
     font-family: var(--plus-jakarta-sans);
     color: var(--color-creamson);
     font-weight: 500;
 }
 
-.popular-food-info-price h5{
+.popular-food-info-price h5 {
     font-size: 20px;
     font-family: var(--plus-jakarta-sans);
     color: var(--color-creamson);
     font-weight: 700;
 }
-
-
-.mid-popular-foods-div .popular-food-rate p{
-    color: #666666;
-}
-
-.mid-popular-foods-div .popular-food-info-price h5 {
-    color: #212A1F;
-}
-
 
 .popular-button-div button {
     display: flex;
@@ -190,7 +190,6 @@
     font-family: var(--plus-jakarta-sans);
     cursor: pointer;
     transition: all 0.3s ease;
-
 }
 
 .popular-button-div button:hover {
@@ -204,4 +203,50 @@
 
 .popular-button-div button:hover img {
     transform: translateX(3px);
+}
+
+@media screen and (max-width: 992px) {
+    .popular h2 {
+        font-size: 42px;
+    }
+
+    .popular-foods-divs {
+        gap: 20px;
+    }
+
+    .mid-popular-foods-div {
+        width: 280px;
+        height: 350px;
+        padding: 27px 32px;
+    }
+
+    .mid-popular-foods-div h4 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .popular {
+        padding: 50px 15px;
+        min-height: auto;
+    }
+
+    .popular h2 {
+        font-size: 34px;
+    }
+
+    .popular-categorize-divs {
+        gap: 8px;
+    }
+
+    .popular-category-div {
+        padding: 0 14px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .popular-foods-div, .mid-popular-foods-div {
+        width: 100%;
+        max-width: 320px;
+    }
 }

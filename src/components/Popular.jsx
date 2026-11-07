@@ -1,81 +1,51 @@
-import pizzaIcon from '../assets/pizza.png';
-import sodaIcon from '../assets/soda.png';
-import friseIcon from '../assets/frise.png';
-import Pepperoni from '../assets/p-3.png';
-import Veggie from '../assets/p-1.png';
-import ChickenRanch from '../assets/p-6.png';
 import starIcon from '../assets/star.svg';
 import arrowRight from '../assets/arrow-right.svg';
-import '../css/style.css'
+import '../css/style.css';
+import { POPULAR_CATEGORIES, POPULAR_FOODS } from '../constants';
 
+function Popular() {
+    return (
+        <section className="popular" id='popular'>
+            <h2>Popular Food</h2>
+            <div className="popular-categorize-divs">
+                {POPULAR_CATEGORIES.map((category) => (
+                    <button
+                        key={category.id}
+                        className="popular-category-div"
+                    >
+                        {category.name}
+                    </button>
+                ))}
+            </div>
 
-function Popular(){
-    return(
-        <section className="popular">
-      <h2>Popular Food</h2>
-      <div className="popular-categorize-divs">
-        <button className="popular-category-div all-pop">All</button>
-        <button className="popular-category-div">
-          Pizza
-        </button>
-        <button className="popular-category-div">
-          Frise
-        </button>
-        <button className="popular-category-div">
-          Soda
-        </button>
-        <button className="popular-category-div">Others</button>
-      </div>
-
-      <div className="popular-foods-divs">
-        <div className="popular-foods-div">
-          <img src={Pepperoni} alt="Pepperoni Pizza" className="pop-food-img" />
-          <h4>Pepperoni</h4>
-          <div className="popular-food-info">
-            <div className="popular-food-rate">
-              <img src={starIcon} alt="Star" />
-              <p>4.7</p>
+            <div className="popular-foods-divs">
+                {POPULAR_FOODS.map((food) => (
+                    <div
+                        key={food.id}
+                        className="popular-foods-div"
+                    >
+                        <img src={food.img} alt={food.name + " Pizza"} className="pop-food-img" />
+                        <h4 className={food.isFeatured ? 'mid-pop-foods-name' : ''}>{food.name}</h4>
+                        <div className="popular-food-info">
+                            <div className="popular-food-rate">
+                                <img src={starIcon} alt="Star" />
+                                <p>{food.rating}</p>
+                            </div>
+                            <div className="popular-food-info-price">
+                                <h5>{food.price}</h5>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="popular-food-info-price">
-              <h5>$21.00</h5>
+            <div className="popular-button-div">
+                <button>
+                    Explore All Foods
+                    <img src={arrowRight} alt="Arrow Right" />
+                </button>
             </div>
-          </div>
-        </div>
-        <div className="popular-foods-div mid-popular-foods-div">
-          <img src={Veggie} alt="Veggie Pizza" className="pop-food-img" />
-          <h4 className="mid-pop-foods-name">Veggie</h4>
-          <div className="popular-food-info">
-            <div className="popular-food-rate">
-              <img src={starIcon} alt="Star" />
-              <p>4.9</p>
-            </div>
-            <div className="popular-food-info-price">
-              <h5>$21.00</h5>
-            </div>
-          </div>
-        </div>
-        <div className="popular-foods-div">
-          <img src={ChickenRanch} alt="Chicken Ranch Pizza" className="pop-food-img" />
-          <h4>Chicken Ranch</h4>
-          <div className="popular-food-info">
-            <div className="popular-food-rate">
-              <img src={starIcon} alt="Star" />
-              <p>4.5</p>
-            </div>
-            <div className="popular-food-info-price">
-              <h5>$21.00</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="popular-button-div">
-        <button>
-          Explore All Foods
-          <img src={arrowRight} alt="Arrow Right" />
-        </button>
-      </div>
-    </section>
-    )
+        </section>
+    );
 }
 
 export default Popular;

@@ -1,16 +1,78 @@
-# React + Vite
+# 🍕 Gusto Pizza - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and visually appealing landing page for an authentic Italian pizza restaurant (**Gusto Pizza**), built with **React** and **Vite** with a strong focus on clean design, layout precision, and great user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Project Purpose
 
-## React Compiler
+The primary objective of this project is **hands-on practice and mastery of HTML5 & CSS3** (Flexbox, CSS Grid, Responsive Design, and CSS custom variables), alongside applying **core React fundamentals**, including:
+- Component-based architecture with clean, reusable components.
+- Data separation using constants and dynamic mapping (`Array.prototype.map`).
+- Interactive state management with React Hooks (e.g., mobile navigation toggle).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> 💡 **Note:** This project is actively being developed and refined. Future enhancements and features (such as an online ordering flow, shopping cart system, and interactive food filters) will be added soon.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🎨 **Modern Italian-Themed UI**: Elegant typography and curated color palette reflecting authentic pizza culinary vibes.
+- 📱 **Fully Responsive**: Seamless layout adaptation across mobile phones, tablets, laptops, and desktops.
+- 🍕 **Comprehensive Sections**:
+  - **Header**: Navigation bar with a mobile drawer menu and search shortcut.
+  - **Hero Section**: Highlighting featured pizza, brand story, call-to-action buttons, and social proof review stats.
+  - **About Us**: Brand identity, mission statement, and interactive exploration trigger.
+  - **Popular Foods**: Dynamic menu cards showcasing pizza items, ratings, and prices, with category tags.
+  - **What's Trending**: Showcasing trending choices with detailed ingredient highlights.
+  - **Call to Action (CTA)**: Newsletter subscription banner with decorative background typography.
+  - **Footer**: Brand links, site navigation, and interactive social media icons.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** (Functional Components, Hooks)
+- **Vite** (Next-generation frontend tooling & build tool)
+- **HTML5 & CSS3** (Flexbox, CSS Grid, Media Queries, Custom Properties)
+- **SVG Vector Assets & Custom Icons**
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally on your machine:
+
+1. **Clone the repository:**
+```bash
+git clone <repository-url>
+cd gusto-pizza
+```
+
+2. **Install dependencies:**
+```bash
+npm install
+```
+
+3. **Start the development server:**
+```bash
+npm run dev
+```
+
+4. **Build for production:**
+```bash
+npm run build
+```
+
+---
+
+## 🔮 Upcoming Improvements
+
+- [ ] Interactive shopping cart drawer.
+- [ ] Live filtering for the Popular Foods section by category.
+- [ ] Modal view for pizza customization (sizes, extra cheese, toppings).
+- [ ] Smooth scroll animations with Framer Motion or AOS.
+
+---
+
+Made with ❤️ and dedication to continuous front-end learning.
