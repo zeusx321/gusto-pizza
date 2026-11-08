@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import searchIcon from '../assets/search.svg';
 import menuIcon from '../assets/menu.svg';
 import '../css/style.css';
 import { NAV_LINKS } from '../constants';
@@ -24,9 +23,6 @@ function Header() {
                             <a href={link.href}>{link.label}</a>
                         </li>
                     ))}
-                    <li>
-                        <img src={searchIcon} alt="Search" />
-                    </li>
                 </ul>
 
                 <button 

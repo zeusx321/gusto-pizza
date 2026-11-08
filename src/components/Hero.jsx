@@ -1,11 +1,29 @@
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player'
 import heroPizza from '../assets/hero-pizza-img.png';
 import playButton from '../assets/play-circle.svg';
 import customerImg from '../assets/user.png';
+import xButton from '../assets/close-x.svg';
 import '../css/style.css'
 
 function Hero(){
+    const [isVideo, setIsVideo] = useState(false);
+
     return (
         <section className="hero">
+            <div className='video-div'
+                style={{ display: isVideo? 'block' : 'none' }}
+                onClick={() => setIsVideo(false)}
+            >
+                <img src={xButton} alt="Close" onClick={() => setIsVideo(false)} />
+                <ReactPlayer src="https://www.youtube.com/watch?v=PcXc8IJXHWw" 
+                    controls
+                    playing={isVideo? true : false} 
+                    className='video-player'
+                    style={{width: '40%', height: '396px'}}
+                />
+            </div>
+
             <div className="hero__image">
                 <img src={heroPizza} alt="Pizza" />
                 <h2>G<br />U<br />S<br />T<br />O</h2>
@@ -19,7 +37,7 @@ function Hero(){
 
                     <div className="hero-content__buttons">
                         <button className="hero-content__order-button">Order Now</button>
-                        <button className="hero-content__play-button">
+                        <button className="hero-content__play-button" onClick={() => setIsVideo(true)}>
                             <img src={playButton} alt="play" />
                             How to Order
                         </button>

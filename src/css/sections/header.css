@@ -80,10 +80,6 @@
     height: 28px;
 }
 
-.header__mobile-dropdown {
-
-}
-
 @media screen and (max-width: 900px) {
     .header__menu {
         gap: 30px;
@@ -97,10 +93,6 @@
         top: 0;
         right: 0;
         left: 0;
-    }
-
-    body{
-        padding-top: 75px;
     }
 
     .header__menu {
