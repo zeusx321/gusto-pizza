@@ -37,7 +37,9 @@ function Header() {
                     <img src={menuIcon} alt="Menu" />
                 </button>
 
-                <div className="header__mobile-dropdown">
+                <div className="header__mobile-dropdown" 
+                    style={{ display: isMenuOpen ? 'block' : 'none' }}
+                >
                     <ul>
                         {NAV_LINKS.map((link) => (
                             <li key={link.id}>
