@@ -1,8 +1,8 @@
 import React from "react";
-import ChickenRanch from "../assets/p-6.png";
-import Pepperoni from "../assets/p-3.png";
-import CheckCircle from "../assets/check-circle.svg";
-import { TRENDING_CHECKS } from "../constants";
+import ChickenRanch from "../../assets/p-6.png";
+import Pepperoni from "../../assets/p-3.png";
+import CheckCircle from "../../assets/check-circle.svg";
+import { TRENDING_CHECKS } from "../../constants";
 
 const Trending = () => {
   return (

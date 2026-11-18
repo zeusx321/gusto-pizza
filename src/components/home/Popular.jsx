@@ -1,20 +1,29 @@
-import starIcon from '../assets/star.svg';
-import arrowRight from '../assets/arrow-right.svg';
-import '../css/style.css';
-import { POPULAR_CATEGORIES, POPULAR_FOODS } from '../constants';
+import starIcon from '../../assets/star.svg';
+import arrowRight from '../../assets/arrow-right.svg';
+import '../../css/style.css';
+import { POPULAR_CATEGORIES, POPULAR_FOODS } from '../../constants';
+import { useLocation } from 'react-router-dom'
 
 function Popular() {
+    const location = useLocation();
+
     return (
         <section className="popular" id='popular'>
             <h2>Popular Food</h2>
             <div className="popular-categorize-divs">
                 {POPULAR_CATEGORIES.map((category) => (
-                    <button
+                    <a
                         key={category.id}
                         className="popular-category-div"
+                        style={{
+                            backgroundColor: category.url == location.hash? 'white' : 'rgba(227, 223, 215, 0.075)',
+                            border: category.url == location.hash? '0px rgba(227, 223, 215, 0.233) solid' : '1px rgba(227, 223, 215, 0.233) solid',
+                            color: category.url == location.hash? 'var(--secondary-color)' : ''
+                        }}
+                        href={category.url}
                     >
                         {category.name}
-                    </button>
+                    </a>
                 ))}
             </div>
 

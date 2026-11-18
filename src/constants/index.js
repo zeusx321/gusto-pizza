@@ -3,18 +3,18 @@ import Veggie from '../assets/p-1.png';
 import ChickenRanch from '../assets/p-6.png';
 
 export const NAV_LINKS = [
-    { id: 'menu', label: 'Menu', href: '#menu' },
+    { id: 'menu', label: 'Menu', href: '/menu' },
     { id: 'food', label: 'Trending', href: '#trending' },
     { id: 'services', label: 'Discover', href: '#discover' },
     { id: 'about-us', label: 'About Us', href: '#about-us' },
 ];
 
 export const POPULAR_CATEGORIES = [
-    { id: 'all', name: 'All', active: true },
-    { id: 'pizza', name: 'Pizza', active: false },
-    { id: 'frise', name: 'Frise', active: false },
-    { id: 'soda', name: 'Soda', active: false },
-    { id: 'others', name: 'Others', active: false },
+    { id: 'all', name: 'All', active: true, url: '#all' },
+    { id: 'pizza', name: 'Pizza', active: false, url: '#pizza' },
+    { id: 'frise', name: 'Frise', active: false, url: '#frise' },
+    { id: 'soda', name: 'Soda', active: false, url: '#soda' },
+    { id: 'others', name: 'Others', active: false, url: '#others' },
 ];
 
 export const POPULAR_FOODS = [

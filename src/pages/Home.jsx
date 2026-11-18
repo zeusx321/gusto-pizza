@@ -1,0 +1,24 @@
+import React from 'react'
+import Header from "../components/layout/Header"
+import Hero from "../components/home/Hero"
+import About from "../components/home/About"
+import Popular from "../components/home/Popular"
+import Trending from "../components/home/Trending"
+import CTA from "../components/home/CTA"
+import Footer from "../components/layout/Footer"
+
+const Home = () => {
+  return (
+    <>
+        <Header />
+        <Hero />
+        <About />
+        <Popular />
+        <Trending />
+        <CTA />
+        <Footer />
+    </>
+  )
+}
+
+export default Home

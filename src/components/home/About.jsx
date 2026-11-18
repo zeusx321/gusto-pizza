@@ -1,6 +1,6 @@
-import aboutPizza from '../assets/about-pizza.png';
-import arrowUp from '../assets/arrow-up-right.svg';
-import '../css/style.css'
+import aboutPizza from '../../assets/about-pizza.png';
+import arrowUp from '../../assets/arrow-up-right.svg';
+import '../../css/style.css'
 
 function About(){
     return(

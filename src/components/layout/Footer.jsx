@@ -1,5 +1,5 @@
 import React from 'react';
-import { NAV_LINKS } from '../constants';
+import { NAV_LINKS } from '../../constants';
 
 const Footer = () => {
     return (

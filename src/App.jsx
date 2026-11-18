@@ -1,24 +1,8 @@
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Popular from "./components/Popular"
-import Trending from "./components/Trending"
-import CTA from "./components/CTA"
-import Footer from "./components/Footer"
+import { RouterProvider } from "react-router/dom";
+import router from "./routes/router";
 
 function App() {
-
-  return (
-    <>
-      <Header />
-      <Hero />
-      <About />
-      <Popular />
-      <Trending />
-      <CTA />
-      <Footer />
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
 export default App

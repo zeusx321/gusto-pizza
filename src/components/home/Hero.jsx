@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player'
-import heroPizza from '../assets/hero-pizza-img.png';
-import playButton from '../assets/play-circle.svg';
-import customerImg from '../assets/user.png';
-import xButton from '../assets/close-x.svg';
-import '../css/style.css'
+import heroPizza from '../../assets/hero-pizza-img.png';
+import playButton from '../../assets/play-circle.svg';
+import customerImg from '../../assets/user.png';
+import xButton from '../../assets/close-x.svg';
+import '../../css/style.css'
 
 function Hero(){
     const [isVideo, setIsVideo] = useState(false);

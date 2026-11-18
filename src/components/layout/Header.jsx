@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import menuIcon from '../assets/menu.svg';
-import '../css/style.css';
-import { NAV_LINKS } from '../constants';
+import menuIcon from '../../assets/menu.svg';
+import '../../css/style.css';
+import { NAV_LINKS } from '../../constants';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
