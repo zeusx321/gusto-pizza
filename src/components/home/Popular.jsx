@@ -1,11 +1,13 @@
 import starIcon from '../../assets/star.svg';
 import arrowRight from '../../assets/arrow-right.svg';
 import '../../css/style.css';
-import { POPULAR_CATEGORIES, POPULAR_FOODS } from '../../constants';
+import { POPULAR_CATEGORIES, POPULAR_FRISE, POPULAR_PIZZA, POPULAR_SODA } from '../../constants';
 import { useLocation } from 'react-router-dom'
+import { useState } from 'react';
 
 function Popular() {
     const location = useLocation();
+    const [ category, setCategory ] = useState('');
 
     return (
         <section className="popular" id='popular'>
@@ -21,6 +23,7 @@ function Popular() {
                             color: category.url == location.hash? 'var(--secondary-color)' : ''
                         }}
                         href={category.url}
+                        onClick={() => setCategory(category.name)}
                     >
                         {category.name}
                     </a>
@@ -28,7 +31,7 @@ function Popular() {
             </div>
 
             <div className="popular-foods-divs">
-                {POPULAR_FOODS.map((food) => (
+                {(category == 'Pizza'? POPULAR_PIZZA : category == 'Frise'? POPULAR_FRISE : POPULAR_SODA).map((food) => (
                     <div
                         key={food.id}
                         className="popular-foods-div"
@@ -41,7 +44,7 @@ function Popular() {
                                 <p>{food.rating}</p>
                             </div>
                             <div className="popular-food-info-price">
-                                <h5>{food.price}</h5>
+                                <h5>${food.price}</h5>
                             </div>
                         </div>
                     </div>
