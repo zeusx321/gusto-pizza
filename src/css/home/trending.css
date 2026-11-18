@@ -116,10 +116,15 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 994px) {
     .trending-div {
         flex-direction: column;
         min-height: auto;
+    }
+
+    /* Reverse the second section so it's: Text then Image */
+    .trending-div:nth-of-type(2) {
+        flex-direction: column-reverse;
     }
 
     .trending-text-main, .trending-img-div {

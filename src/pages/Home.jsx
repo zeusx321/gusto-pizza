@@ -10,7 +10,7 @@ import Footer from "../components/layout/Footer"
 const Home = () => {
   return (
     <>
-        <Header />
+        <Header isHome={true} />
         <Hero />
         <About />
         <Popular />

@@ -2,13 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
 /* other css file imports */
-@import url("home/header.css");
+@import url("layout/header.css");
 @import url("home/hero.css");
 @import url("home/about.css");
 @import url("home/popular.css");
 @import url("home/trending.css");
 @import url("home/cta.css");
-@import url("home/footer.css");
+@import url("layout/footer.css");
+
+/* menu css file imports */
+@import url("menu/menuCategories.css");
+@import url("menu/card.css");
+@import url("menu/menuGrid.css");
 /*
 @import url("sections/trending.css");
 @import url("sections/subscribe.css");

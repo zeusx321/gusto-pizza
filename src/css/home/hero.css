@@ -212,9 +212,9 @@
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 994px) {
     .hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
         min-height: auto;
     }
 
@@ -290,7 +290,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 994px) {
     .hero{
         padding-top: 75px;
     }

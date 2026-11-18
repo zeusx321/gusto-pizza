@@ -3,7 +3,7 @@ import menuIcon from '../../assets/menu.svg';
 import '../../css/style.css';
 import { NAV_LINKS } from '../../constants';
 
-function Header() {
+function Header({ isHome = false }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -11,11 +11,11 @@ function Header() {
     };
 
     return (
-        <header>
+        <header className={isHome ? 'header--home' : 'header--solid'}>
             <nav className="header__nav">
                 <div className="header__logo">
-                    <h4>Gusto Pizza</h4>
-                    <div className="header__logo-overlay"></div>
+                    <a href='/'>Gusto Pizza</a>
+                    {isHome && <div className="header__logo-overlay"></div>}
                 </div>
                 <ul className="header__menu">
                     {NAV_LINKS.map((link) => (
