@@ -1,69 +1,85 @@
-# 🍕 Gusto Pizza - Landing Page
+# 🍕 Gusto Pizza
 
-A modern, responsive, and visually appealing landing page for an authentic Italian pizza restaurant (**Gusto Pizza**), built with **React** and **Vite** with a strong focus on clean design, layout precision, and great user experience.
+A modern, responsive pizza restaurant website built with **React**, **Vite**, and **React Router**. Gusto Pizza combines a polished restaurant landing page with an interactive food menu featuring pizzas, fries, and soft drinks.
 
----
-
-## 🎯 Project Purpose
-
-The primary objective of this project is **hands-on practice and mastery of HTML5 & CSS3** (Flexbox, CSS Grid, Responsive Design, and CSS custom variables), alongside applying **core React fundamentals**, including:
-- Component-based architecture with clean, reusable components.
-- Data separation using constants and dynamic mapping (`Array.prototype.map`).
-- Interactive state management with React Hooks (e.g., mobile navigation toggle).
-
-> 💡 **Note:** This project is actively being developed and refined. Future enhancements and features will be added soon.
-
----
+> **Project status:** Frontend demo under active development. The "Order Now" button currently shows a confirmation alert; it does not process real orders or payments.
 
 ## ✨ Features
 
-- 🎨 **Modern Italian-Themed UI**: Elegant typography and curated color palette reflecting authentic pizza culinary vibes.
-- 📱 **Fully Responsive**: Seamless layout adaptation across mobile phones, tablets, laptops, and desktops.
-- 🍕 **Comprehensive Sections**:
-  - **Header**: Navigation bar with a mobile drawer menu and search shortcut.
-  - **Hero Section**: Highlighting featured pizza, brand story, call-to-action buttons, and social proof review stats.
-  - **About Us**: Brand identity, mission statement, and interactive exploration trigger.
-  - **Popular Foods**: Dynamic menu cards showcasing pizza items, ratings, and prices, with category tags.
-  - **What's Trending**: Showcasing trending choices with detailed ingredient highlights.
-  - **Call to Action (CTA)**: Newsletter subscription banner with decorative background typography.
-  - **Footer**: Brand links, site navigation, and interactive social media icons.
-
----
+- **Responsive restaurant landing page** with hero, about, popular items, trending food, and call-to-action sections.
+- **Dedicated menu page** accessible at `/menu`.
+- **Category filtering** to browse all items, pizzas, fries, or sodas.
+- **Product cards** displaying food images, names, ratings, and prices.
+- **Quantity controls** for increasing or decreasing an item's quantity (minimum: 1).
+- **Interactive navigation**, including a mobile menu.
+- **Reusable React components** and centralized menu data for easier maintenance.
 
 ## 🛠️ Tech Stack
 
-- **React.js** (Functional Components, Hooks)
-- **Vite** (Next-generation frontend tooling & build tool)
-- **HTML5 & CSS3** (Flexbox, CSS Grid, Media Queries, Custom Properties)
-- **SVG Vector Assets & Custom Icons**
-
----
+- **React 19** — component-based user interfaces and state management with Hooks
+- **React Router 7** — client-side routing between Home and Menu
+- **Vite 8** — development server and production builds
+- **CSS3** — responsive layouts and styling
+- **React Player** — media playback integration
 
 ## 🚀 Getting Started
 
-Follow these steps to run the project locally on your machine:
+### Prerequisites
 
-1. **Clone the repository:**
+- Node.js and npm installed
+
+### Installation
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/zeusx321/gusto-pizza.git
 cd gusto-pizza
-```
-
-2. **Install dependencies:**
-```bash
 npm install
-```
-
-3. **Start the development server:**
-```bash
 npm run dev
 ```
 
-4. **Build for production:**
-```bash
-npm run build
+Open the local URL printed by Vite (typically `http://localhost:5173`).
+
+### Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the app for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+## 📁 Project Structure
+
+```text
+src/
+├── assets/                 # Images and SVGs
+├── components/
+│   ├── home/               # Home page sections
+│   ├── layout/             # Header and Footer
+│   └── menu/               # Menu grid, categories, and cards
+├── constants/
+│   └── index.js            # Navigation and product data
+├── css/
+│   ├── home/
+│   ├── layout/
+│   ├── menu/
+│   └── style.css
+├── pages/
+│   ├── Home.jsx
+│   └── Menu.jsx
+├── routes/
+│   └── router.jsx
+├── App.jsx
+└── main.jsx
 ```
+
+## 🧭 Pages
+
+| Route | Description |
+| --- | --- |
+| `/` | Restaurant landing page |
+| `/menu` | Interactive menu with category filters and quantity selectors |
 
 ---
 
-Made with ❤️.
+If you like this project, consider giving the repository a ⭐.
